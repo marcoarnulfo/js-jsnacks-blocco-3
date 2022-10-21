@@ -78,12 +78,19 @@ const diesel = cars.filter((element) => {
 })
 
 console.log(diesel);
-
+/*
 const unknown = cars.filter((element) => {
     if (element.alimentazione === 'gpl' || element.alimentazione === 'elettrico' || element.alimentazione === 'metano' ) {
         return true
     }
 })
+*/
 
+const unknown = cars.filter((element) => {
+    if (element.alimentazione === 'benzina' || element.alimentazione === 'diesel') {
+        return false
+    }
+    return true
+})
 console.log(unknown);
 
